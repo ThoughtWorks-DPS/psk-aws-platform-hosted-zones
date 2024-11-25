@@ -13,7 +13,7 @@ provider "aws" {
 # create a route53 hosted zone for the subdomain in the account defined by the provider above
 module "subdomain_prod_i01_aws_us_east_2_twdps_digital" {
   source  = "terraform-aws-modules/route53/aws//modules/zones"
-  version = "3.1.0"
+  version = "4.1.0"
   create  = true
 
   providers = {
@@ -36,7 +36,7 @@ module "subdomain_prod_i01_aws_us_east_2_twdps_digital" {
 # Create a zone delegation in the top level domain for this subdomain
 module "subdomain_zone_delegation_prod_i01_aws_us_east_2_twdps_digital" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
-  version = "3.1.0"
+  version = "4.1.0"
   create  = true
 
   providers = {
